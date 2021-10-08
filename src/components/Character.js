@@ -3,10 +3,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import '../App.css';
-function Character(props){
-const {dataDisplay}=props;
-
-
 const StyledDetails  = styled.div`
 width:100%;
 height:100%;
@@ -41,6 +37,12 @@ span{
     border-radius: 10px;
 }
 ` 
+function Character(props){
+const {dataDisplay}=props;
+
+
+
+
 return (
     < StyledDetails >
      
@@ -52,6 +54,7 @@ return (
         <span>
         {dataDisplay.birth_year}
         </span>
+        
     </div>
     </StyledDetails>
   );
