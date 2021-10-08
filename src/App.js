@@ -10,7 +10,8 @@ const App = () => {
   axios.get(`https://swapi.dev/api/people`)
       .then(res => {
         setData(res.data);
-        console.log(data);
+        console.log('data');
+        console.log(res.data);
       }).catch(err => {
         console.error(err);
       })
@@ -26,7 +27,8 @@ const App = () => {
     
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {<Character {data}.map() => {}/>}
+      {/*<Character dataDisplay={data}/>*/}
+     {  data.map(da => { return <Character dataDisplay={da}  key={da.id} />}) }
     </div>
   );
 }
