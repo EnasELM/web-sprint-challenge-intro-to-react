@@ -27,17 +27,32 @@ div{
    text-align: center;
    border-radius: 10px;
    width:90%;
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+}
+span{
+    background:gray;
+    color:black;
+    border:2px solid;
+    padding:1em 2em;
+    font-size:1em;
+    letter-spacing:3px;
+    border-radius: 10px;
 }
 ` 
 return (
     < StyledDetails >
      
     
-    <div>{dataDisplay.name}</div>
-    
-    
- 
-
+    <div>
+        <span>
+        {dataDisplay.name}
+        </span>
+        <span>
+        {dataDisplay.birth_year}
+        </span>
+    </div>
     </StyledDetails>
   );
 }
